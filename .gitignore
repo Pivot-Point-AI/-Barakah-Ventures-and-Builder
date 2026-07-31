@@ -25,3 +25,7 @@ node_modules/
 dist/
 build/
 .cache/
+
+# Generated from src/index/ and src/contact/ via `npm run build`
+/index.html
+/contact.html
