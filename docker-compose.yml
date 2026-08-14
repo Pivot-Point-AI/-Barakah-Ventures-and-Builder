@@ -1,0 +1,47 @@
+services:
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy:alpine
+    container_name: nginx-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - proxy_conf:/etc/nginx/conf.d
+      - proxy_vhost:/etc/nginx/vhost.d
+      - proxy_html:/usr/share/nginx/html
+      - proxy_certs:/etc/nginx/certs:ro
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+  acme-companion:
+    image: nginxproxy/acme-companion
+    container_name: nginx-proxy-acme
+    restart: unless-stopped
+    depends_on:
+      - nginx-proxy
+    environment:
+      - DEFAULT_EMAIL=${LETSENCRYPT_EMAIL:-contact@barakahventures.us}
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    volumes:
+      - proxy_conf:/etc/nginx/conf.d
+      - proxy_vhost:/etc/nginx/vhost.d
+      - proxy_html:/usr/share/nginx/html
+      - proxy_certs:/etc/nginx/certs
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+  web:
+    build: .
+    container_name: barakah-site
+    restart: unless-stopped
+    expose:
+      - "80"
+    environment:
+      - VIRTUAL_HOST=barakahventures.us,www.barakahventures.us
+      - LETSENCRYPT_HOST=barakahventures.us,www.barakahventures.us
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL:-contact@barakahventures.us}
+
+volumes:
+  proxy_conf:
+  proxy_vhost:
+  proxy_html:
+  proxy_certs:
