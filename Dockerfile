@@ -10,4 +10,4 @@ COPY --from=build /app/index.html /app/contact.html /usr/share/nginx/html/
 COPY assets/ /usr/share/nginx/html/assets/
 COPY public/ /usr/share/nginx/html/public/
 
-HEALTHCHECK --interval=30s --timeout=3s CMD wget -qO- http://localhost/ >/dev/null || exit 1
+HEALTHCHECK --interval=30s --timeout=3s CMD wget -qO- http://127.0.0.1/ >/dev/null || exit 1
