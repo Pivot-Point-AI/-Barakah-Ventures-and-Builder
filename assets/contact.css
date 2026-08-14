@@ -197,7 +197,9 @@
   .header-icon[aria-label="Facebook"],
   .fe-block-yui_3_17_2_1_1738270088494_56201,
   .fe-block-d51b1862da0138459ed5,
-  .fe-block-abecd7da39e19ecef881 {
+  .fe-block-abecd7da39e19ecef881,
+  .pin-it-btn,
+  [data-pin-do] {
     display: none !important;
   }
 
