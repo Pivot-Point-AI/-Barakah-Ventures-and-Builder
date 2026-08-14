@@ -199,8 +199,8 @@
   }
   @media (max-width: 640px) {
     .header-title-logo img {
-      height: 105px !important;
-      max-height: 55px !important;
+      height: 75px !important;
+      max-height: 75px !important;
     }
   }
 
@@ -408,7 +408,7 @@
 
   @media (min-width: 768px) {
     .fe-block-78c461436aa80c8f8fb5 {
-      grid-area: 8/15/10/20;
+      grid-area: 8/15/10/21;
       z-index: 3;
 
 
@@ -453,32 +453,6 @@
     }
   }
 
-  .fe-block-yui_3_17_2_1_1693406296357_6374 .sqs-block-button-element,
-  .fe-block-78c461436aa80c8f8fb5 .sqs-block-button-element,
-  .fe-block-78c461436aa80c8f8fb9 .sqs-block-button-element {
-    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .fe-block-yui_3_17_2_1_1693406296357_6374 .sqs-block-button-element:hover,
-  .fe-block-78c461436aa80c8f8fb5 .sqs-block-button-element:hover,
-  .fe-block-78c461436aa80c8f8fb9 .sqs-block-button-element:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(17, 24, 39, 0.18);
-  }
-
-  .fe-block-78c461436aa80c8f8fb5 .sqs-block-button-element,
-  .fe-block-78c461436aa80c8f8fb9 .sqs-block-button-element {
-    border-width: 1.5px;
-    font-weight: 600;
-    background-color: #ffffff;
-  }
-
-  .fe-block-78c461436aa80c8f8fb5 .sqs-block-button-element:hover,
-  .fe-block-78c461436aa80c8f8fb9 .sqs-block-button-element:hover {
-    background-color: rgba(196, 30, 40, 0.06);
-  }
-
   @media (max-width: 767px) {
     .fe-block-yui_3_17_2_1_1693406296357_6374 .sqs-block-button-container,
     .fe-block-78c461436aa80c8f8fb5 .sqs-block-button-container,
@@ -499,25 +473,6 @@
     }
   }
 
-  @media (min-width: 768px) {
-    .fe-block-yui_3_17_2_1_1693406296357_6374 .sqs-block-button-element,
-    .fe-block-78c461436aa80c8f8fb5 .sqs-block-button-element,
-    .fe-block-78c461436aa80c8f8fb9 .sqs-block-button-element {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      min-height: 92px;
-      text-align: center;
-      line-height: 1.35;
-    }
-
-    .fe-block-yui_3_17_2_1_1693406296357_6374 .sqs-block-button-container,
-    .fe-block-78c461436aa80c8f8fb5 .sqs-block-button-container,
-    .fe-block-78c461436aa80c8f8fb9 .sqs-block-button-container {
-      width: 100%;
-    }
-  }
 
 
 #block-40859de8c0b2003ec418 {
